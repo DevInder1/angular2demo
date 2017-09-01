@@ -1,0 +1,22 @@
+<div class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-blackboard"></span> </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a routerLink="/view">BookView</a></li>
+      <li><a routerLink="/upload">BookUpload</a></li>
+      <li><a routerLink="/temperature">Temperature</a></li>
+      <li><a routerLink="/windspeed">Windspeed</a></li>
+    </ul>
+  </div>
+</div>
+<br>
+<div class="col-xs-1">
+  <select (change)="onchange($event.target.value)">
+    <option>Select Book</option>
+    <option *ngFor="let op of values">{{op}}</option>
+  </select>
+</div>
+<br>
+
