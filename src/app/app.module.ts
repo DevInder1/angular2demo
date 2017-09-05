@@ -15,6 +15,7 @@ import { DashpanelComponent } from './dashpanel/dashpanel.component';
 import {RetailersComponent} from "./retailers/retailers.component";
 import { TemperatureComponent } from './temperature/temperature.component';
 import {selectcomponent} from "./services/selectcomponent";
+import {selectheader} from "./services/selectheader";
 
 
 @NgModule({
@@ -32,9 +33,9 @@ import {selectcomponent} from "./services/selectcomponent";
     BrowserModule,
     FormsModule,
     HttpModule,
-    RoutingConfigModule
+   //RoutingConfigModule
   ],
-  providers: [BookServiceService,selectbookservice,selectcomponent],
-  bootstrap: [AppComponent,BookUploadComponent,TemperatureComponent,DashpanelComponent]
+  providers: [BookServiceService,selectbookservice,selectcomponent,selectheader],
+  bootstrap: [AppComponent/*BookUploadComponent,TemperatureComponent,DashpanelComponent*/]
 })
 export class AppModule { }

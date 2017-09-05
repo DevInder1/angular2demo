@@ -4,10 +4,14 @@
       <a href="#" class="navbar-brand"><span class="glyphicon glyphicon-blackboard"></span> </a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a routerLink="/view">BookView</a></li>
+     <!-- <li><a routerLink="/view">BookView</a></li>
       <li><a routerLink="/upload">BookUpload</a></li>
       <li><a routerLink="/temperature">Temperature</a></li>
-      <li><a routerLink="/windspeed">Windspeed</a></li>
+      <li><a routerLink="/windspeed">Windspeed</a></li>-->
+      <li><a href="#" (click)="onchangeall('bookview')">BookView</a></li>
+      <li><a href="#" (click)="onchangeall('bookupload')">BookUpload</a></li>
+      <li><a href="#" (click)="onchangeall('temperature')">Temperature</a></li>
+      <li><a href="#" (click)="onchangeall('windspeed')">Windspeed</a></li>
     </ul>
   </div>
 </div>

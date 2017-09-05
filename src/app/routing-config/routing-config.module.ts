@@ -12,12 +12,12 @@ import {RetailersComponent} from "../retailers/retailers.component";
 
 
 
-const com=this.bookupload === 'book' ? BookUploadComponent:RetailersComponent;
+/*const com=this.bookupload === 'book' ? BookUploadComponent:RetailersComponent;*/
 //const com=bookuplad==='book1'?:BookViewComponent;
 const appRoutes: Routes = [
   {path: '', redirectTo: '/view', pathMatch: 'full'},
   {path: 'view', component: BookViewComponent},
- {path: 'upload', component: com},
+ {path: 'upload', component: BookUploadComponent},
   {path:'temperature',component:TemperatureComponent},
   {path:'windspeed',component:DashpanelComponent}
 
@@ -35,7 +35,7 @@ export class RoutingConfigModule {
   public bookupload;
 
   constructor(private selectcom:selectcomponent){
-    this.selectcom.selectcomponent.subscribe((data:boolean)=>
+    this.selectcom.addnewcom.subscribe((data:string)=>
     {
       this.bookupload=data;
       console.log('routing'+" "+this.bookupload);

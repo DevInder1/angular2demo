@@ -14,7 +14,8 @@ export class BookViewComponent implements OnInit {
   bookview: bookModel[];
   title="book";
   data:string;
-  bookupload=true;
+  show;
+  bookv;
 
   constructor(private bookservice:BookServiceService,private selectserv:selectbookservice,private selectcom:selectcomponent) {
     this.bookview=this.bookservice.getBookDetails();
@@ -26,16 +27,26 @@ export class BookViewComponent implements OnInit {
     this.selectserv.selectvalue.subscribe((data:string)=>
     {
       this.data=data;
-      console.log(this.data)
+      console.log("bookview"+this.data)
     })
-    /*this.selectcom.selectcomponent.subscribe((data:boolean)=>
+    /*this.selectcom.selectcomponent.subscribe((data:string)=>
     {
-      this.bookupload=data;
-      console.log('routing'+"  "+ this.bookupload);
+      this.bookv=data;
+      console.log('routing'+"  "+ this.bookv);
     })*/
   }
+  onCilck(){
+    this.bookv='bookview';
+    this.selectcom.addcomponet(this.bookv);
+    console.log(this.bookv);
+
+
+  }
+
+
 
   ngOnInit() {
+    this.show=true;
   }
 
 }

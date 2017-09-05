@@ -11,7 +11,7 @@ import {selectcomponent} from "../services/selectcomponent";
 })
 export class BookUploadComponent implements OnInit {
   bookdetails: bookModel[];
-  bookupload='falsebook';
+  bookupload;
 
   constructor(private bkservice:BookServiceService,private selectcom:selectcomponent) {
 
@@ -29,8 +29,8 @@ export class BookUploadComponent implements OnInit {
     this.bkservice.addBook(bkobject);
   }
   onCilck(){
-    this.bookupload='book';
-    this.selectcom.selectcomponent.next(this.bookupload);
+    this.bookupload='bookupload';
+    this.selectcom.addcomponet(this.bookupload);
     console.log(this.bookupload);
 
 

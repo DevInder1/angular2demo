@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs/Observable";
+import {selectcomponent} from "../services/selectcomponent";
 
 @Component({
   selector: 'app-dashpanel',
@@ -8,7 +9,8 @@ import {Observable} from "rxjs/Observable";
 })
 export class DashpanelComponent implements OnInit {
 windspeed;
-  constructor() { }
+dashpanel;
+  constructor(private selectcom:selectcomponent) { }
 
   ngOnInit() {
     const myNumbers = Observable.interval(1000);
@@ -17,6 +19,13 @@ windspeed;
         this.windspeed = number * Math.random();
       }
     )
+
+  }
+  onCilck(){
+    this.dashpanel='windspeed';
+    this.selectcom.addcomponet(this.dashpanel);
+    console.log(this.dashpanel);
+
 
   }
 
