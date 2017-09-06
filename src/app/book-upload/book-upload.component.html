@@ -2,7 +2,8 @@
 <form (ngSubmit)="onAddBook(f)" #f="ngForm">
   <div class="col-xs-5" #upload>
     <div class="panel panel-success">
-      <div class="panel-heading">Upload <button   type="button" class="btn btn-sucess"  aria-label="Left align" (click)="upload.remove();onCilck()"><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span></button></div>
+     <!-- <div class="panel-heading">Upload <button   type="button" class="btn btn-sucess"  aria-label="Left align" (click)="upload.remove();onCilck()"><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span></button></div>-->
+      <div class="panel-heading">Upload <button   type="button" class="btn btn-sucess"  aria-label="Left align" (click)="onCilck()"><span class="glyphicon glyphicon-remove" aria-hidden="true" ></span></button></div>
     <div class="panel-body">
       <p>ADD NEW BOOK</p>
       <hr>
